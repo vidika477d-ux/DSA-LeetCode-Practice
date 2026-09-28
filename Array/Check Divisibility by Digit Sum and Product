@@ -1,0 +1,20 @@
+//Leetcode easy level question
+class Solution {
+    public boolean checkDivisibility(int n) {
+        
+            int digsum=0;
+            int digproduct=1;
+            int original=n;
+            while(n>0){
+                int digit=n%10;
+                n/=10;
+
+                digsum+=digit;
+                digproduct*=digit;
+
+            }
+            return (original % (digsum+digproduct))==0;
+    } 
+        
+    
+}
